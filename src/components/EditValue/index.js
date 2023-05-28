@@ -51,7 +51,7 @@ const EditValue = ({ players, onSave }) => {
                       </>
                     ) : (
                       <>
-                        <td width="20%">{player.name}</td>
+                        <td width="20%">{player.name} - {player.entrada} entrada</td>
                       </>
                     )}
                   </>
