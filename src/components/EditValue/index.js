@@ -42,7 +42,7 @@ const EditValue = ({ players, onSave }) => {
           {players.map((player, index) => (
             <tr key={index}>
               {player.initialValue === 0 ? (
-                <td style={{textDecoration: "line-through"}} width="20%">{player.name}</td>
+                <td style={{textDecoration: "line-through"}} width="20%">{player.name} - {player.entrada} entrada </td>
                 ) : (
                   <>
                     {player.entrada > 0 ? (
@@ -51,7 +51,7 @@ const EditValue = ({ players, onSave }) => {
                       </>
                     ) : (
                       <>
-                        <td width="20%">{player.name} - {player.entrada} entrada</td>
+                        <td width="20%">{player.name}</td>
                       </>
                     )}
                   </>
