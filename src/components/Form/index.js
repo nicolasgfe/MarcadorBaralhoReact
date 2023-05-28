@@ -7,7 +7,8 @@ const PlayersForm = ({ onSave }) => {
   const save = () => {
     const player = {
       name,
-      initialValue
+      initialValue,
+      entrada: 0
     }
 
     onSave(player)

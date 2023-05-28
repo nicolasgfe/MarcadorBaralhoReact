@@ -36,20 +36,20 @@ const App = () => {
       <h1>Marcador cacheta</h1>
       <ExpensesForm onSave={updateList} />
       &nbsp; &nbsp;
-      <input type="button" value="Nova Partida" onClick={clear} disabled={(!items.length > 0)} />
+      <input 
+        type="button" 
+        value="Nova Partida" 
+        onClick={clear} 
+        disabled={(!items.length > 0)}
+        />
       <br /><br />
-      {
-        items.length > 0 ? (
-          <>
-            <EditValue players={items} onSave={editList} />
-            <br /><br />
-            <ExpensesList players={items} />
-          </>
-        ) : (
-          <>
-          </>
-        )
-      }
+      {items.length > 0 && (
+        <>
+          <EditValue players={items} onSave={editList} />
+          <br /><br />
+          <ExpensesList players={items} />
+        </>
+      )}
     </div>
   )
 }
